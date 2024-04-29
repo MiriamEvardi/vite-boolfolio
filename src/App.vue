@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import ProjectCard from './components/ProjectCard.vue';
 
 export default {
   data (){
@@ -11,7 +12,15 @@ export default {
 
       baseApiUrl: 'http://127.0.0.1:8000/api',
 
+
     }
+
+  },
+
+  components : {
+    
+    ProjectCard,
+    
   },
 
   mounted (){
@@ -38,6 +47,8 @@ export default {
     this.apiCall();
   },
 },
+
+
 }
   
 
@@ -45,6 +56,7 @@ export default {
 
 <template>
   
+  <ProjectCard v-for="currentProject in projects" :projectTitle="currentProject.name"></ProjectCard>
 
 </template>
 
