@@ -1,11 +1,25 @@
 <script>
-    
+
+export default{
+
+    name: 'ProjectCard',
+
+}
+
 </script>
 
 <template>
-    <div>
-        
+    
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Nome progetto</h5>
+            <p class="card-text">Descrizione progetto</p>
+            <a href="#" class="btn btn-warning">Modifica</a>
+            <a href="#" class="btn btn-danger">Elimina</a>
+        </div>
     </div>
+    
 </template>
 
 <style>
