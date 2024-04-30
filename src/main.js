@@ -3,7 +3,7 @@ import './style.scss'
 import App from './App.vue'
 
 //router import
-import { router } from './router'
+import { router } from './router.js'
 
 import * as bootstrap from 'bootstrap'
 

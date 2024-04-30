@@ -14,8 +14,6 @@ export default {
             apiLinks: [],
             apiPageNumber: 1,
 
-            isLoading: true,
-
             baseApiUrl: 'http://127.0.0.1:8000/api',
 
 
@@ -39,17 +37,11 @@ export default {
 
         apiCall() {
 
-            this.isLoading = true
-
             axios.get(this.baseApiUrl + '/projects', {
                 params: {
                 page: this.apiPageNumber
                 }
             }).then(res => {
-            
-                if(res.data.success) {
-                    this.isLoading = false
-                }
 
                 this.projects = res.data.results.data;
 
@@ -75,11 +67,9 @@ export default {
     <div class="container py-5">
 
         <h1>Progetti</h1>
-
-        <div v-if="!isLoading">
         
             <div class="container d-flex align-items-center justify-content-center gap-5 my-5">
-              <ProjectCard v-for="currentProject in projects" :projectTitle="currentProject.name"></ProjectCard>
+              <ProjectCard v-for="currentProject in projects" :project="currentProject"></ProjectCard>
             </div>    
             
             <ul class="d-flex gap-2 justify-content-center mt-5">
@@ -87,13 +77,9 @@ export default {
                 </li>
             </ul>
 
-        </div>
+  
 
-        <div v-else>
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
+       
 
     </div>
 

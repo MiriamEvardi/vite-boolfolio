@@ -7,17 +7,21 @@ export default{
 
     data(){
         return{
-
             project: null,
+            slugProject: null,
 
             baseApiUrl: 'http://127.0.0.1:8000/api',
-
 
         }
     },
 
     mounted(){
+        this.slugProject = this.$route.params.slug;
         
+        axios.get(this.baseApiUrl + '/projects/' + this.slugProject).then(res => {
+
+                this.project = res.data.project;
+            })
     }
 
 }
@@ -25,11 +29,7 @@ export default{
 </script>
 
 <template>
-    <header>
-        <nav>
-            <h1>Boolfolio</h1>
-        </nav>
-    </header>
+    <p>aaaaaaaaaa</p>
 </template>
 
 <style lang="scss">
