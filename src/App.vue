@@ -29,7 +29,7 @@ export default {
 <template>
     <div class="container d-flex align-items-center justify-content-center gap-5 my-5">
 
-        <Appheader></Appheader>
+        <AppHeader></AppHeader>
         <router-view></router-view>
 
     </div>
