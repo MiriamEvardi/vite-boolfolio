@@ -1,17 +1,19 @@
 <script>
 
 export default{
-
+    name: 'AppHeader',
 }
 
 </script>
 
 <template>
-    <div>
-        
-    </div>
+    <header>
+        <nav>
+            <h1>Boolfolio</h1>
+        </nav>
+    </header>
 </template>
 
-<style>
+<style lang="scss">
 
 </style>

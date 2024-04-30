@@ -1,4 +1,5 @@
 <script>
+import AppHeader from './pages/AppHeader.vue';
 
 export default {
   data (){
@@ -9,7 +10,7 @@ export default {
   },
 
   components : {
-  
+    AppHeader
   },
 
   mounted (){
