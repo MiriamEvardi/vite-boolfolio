@@ -28,8 +28,11 @@ export default{
         <div class="card-body">
             <h5 class="card-title">{{ projectTitle }}</h5>
             <p class="card-text">Descrizione progetto</p>
-            <a href="#" class="btn btn-warning">Modifica</a>
-            <a href="#" class="btn btn-danger">Elimina</a>
+            <div class="button d-flex">
+                <router-link :to="{name: show-project}" href="#" class="btn btn-primary">Visualizza</router-link>
+                <a href="#" class="btn btn-warning">Modifica</a>
+                <a href="#" class="btn btn-danger">Elimina</a>
+            </div>
         </div>
     </div>
     
