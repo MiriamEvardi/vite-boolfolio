@@ -10,6 +10,8 @@ export default {
       apiLinks: [],
       apiPageNumber: 1,
 
+      isLoading: true,
+
       baseApiUrl: 'http://127.0.0.1:8000/api',
 
 
@@ -35,6 +37,11 @@ export default {
           page: this.apiPageNumber
         }
     }).then(res => {
+
+      if(res.data.success) {
+            this.isLoading = false
+            }
+
       this.projects = res.data.results.data;
 
       this.apiLinks = res.data.results.links;
@@ -55,6 +62,7 @@ export default {
 </script>
 
 <template>
+   <div v-if="!isLoading">
     <div class="container d-flex align-items-center justify-content-center gap-5 my-5">
       <ProjectCard v-for="currentProject in projects" :projectTitle="currentProject.name"></ProjectCard>
     </div>    
@@ -68,7 +76,12 @@ export default {
     </ul>
 
     <router-view></router-view>
-
+  </div>
+  <div v-else>
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
 </template>
 
 <style scoped>
