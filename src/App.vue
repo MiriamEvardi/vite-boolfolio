@@ -42,8 +42,5 @@ export default {
 
 <style lang="scss">
 
-body {
-  overflow-y: hidden;
-}
 
 </style>
