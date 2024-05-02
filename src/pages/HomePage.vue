@@ -78,11 +78,11 @@ export default {
 
             <h1 class="display-2 mt-5 text-center">Progetti</h1>
             
-                <div class="container d-flex align-items-center justify-content-center gap-5 my-5">
+                <div class="container d-flex align-items-center justify-content-center gap-5 my-3">
                 <ProjectCard v-for="currentProject in projects" :project="currentProject"></ProjectCard>
                 </div>    
                 
-                <div class="text-center">
+                <div class="text-center pt-3">
 
                     <vue-awesome-paginate
                         :total-items="10"

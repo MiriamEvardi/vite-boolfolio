@@ -21,7 +21,7 @@ export default{
 
 <template>
     
-    <div class="card">
+    <div class="card pt-3 px-3">
         <div class="image">
             <img :src="'http://localhost:8000/storage/' + project.preview" class="card-img-top" alt="...">
         </div>
@@ -36,17 +36,17 @@ export default{
 </template>
 
 <style lang="scss">
-
     .card {
-        width: 25%;
+        width: 20%;
     }
 
     .image {
         width: 100%;
+        height: 150px;
+        display: flex; 
     }
 
     img {
-        width: 100%;
-        height: 100%;
+        object-fit: cover;
     }
 </style>
