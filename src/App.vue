@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-    <div class=" align-items-center justify-content-center gap-5 my-5">
+    <div class=" align-items-center justify-content-center gap-5 my-5 overflow-hidden">
 
         <AppHeader></AppHeader>
         <router-view></router-view>
@@ -42,6 +42,8 @@ export default {
 
 <style lang="scss">
 
-
+body {
+  overflow-y: hidden;
+}
 
 </style>
