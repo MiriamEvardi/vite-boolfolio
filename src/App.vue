@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-    <div class="container align-items-center justify-content-center gap-5 my-5">
+    <div class=" align-items-center justify-content-center gap-5 my-5">
 
         <AppHeader></AppHeader>
         <router-view></router-view>
