@@ -76,7 +76,7 @@ export default {
 
         <div class="container py-5">
 
-            <h1 class="display-2 text-center">Progetti</h1>
+            <h1 class="display-2 mt-5 text-center">Progetti</h1>
             
                 <div class="container d-flex align-items-center justify-content-center gap-5 my-5">
                 <ProjectCard v-for="currentProject in projects" :project="currentProject"></ProjectCard>
@@ -103,9 +103,7 @@ export default {
 
 .home-bg {
     background-image: linear-gradient(112.5deg, rgb(83,82,82) 0%, rgb(83,82,82) 10%,rgb(98,98,98) 10%, rgb(98,98,98) 53%,rgb(98,98,98) 53%, rgb(98,98,98) 55%,rgb(88,87,87) 55%, rgb(88,87,87) 60%,rgb(67,67,67) 60%, rgb(67,67,67) 88%,rgb(57,56,56) 88%, rgb(57,56,56) 91%,rgb(57,56,56) 91%, rgb(57,56,56) 100%),linear-gradient(157.5deg, rgb(83,82,82) 0%, rgb(83,82,82) 10%,rgb(98,98,98) 10%, rgb(98,98,98) 53%,rgb(98,98,98) 53%, rgb(98,98,98) 55%,rgb(88,87,87) 55%, rgb(88,87,87) 60%,rgb(67,67,67) 60%, rgb(67,67,67) 88%,rgb(57,56,56) 88%, rgb(57,56,56) 91%,rgb(57,56,56) 91%, rgb(57,56,56) 100%),linear-gradient(135deg, rgb(83,82,82) 0%, rgb(83,82,82) 10%,rgb(98,98,98) 10%, rgb(98,98,98) 53%,rgb(98,98,98) 53%, rgb(98,98,98) 55%,rgb(88,87,87) 55%, rgb(88,87,87) 60%,rgb(67,67,67) 60%, rgb(67,67,67) 88%,rgb(57,56,56) 88%, rgb(57,56,56) 91%,rgb(57,56,56) 91%, rgb(57,56,56) 100%),linear-gradient(90deg, rgb(98,98,98),rgb(199,199,199)); background-blend-mode:overlay,overlay,overlay,normal;
-    width: 100vw;
     height: 100vh;
-
 }
 
 ul {
