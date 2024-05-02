@@ -21,22 +21,22 @@ export default{
                 <!-- offcanvas sidebar-->
                 <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header border-bottom">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Vite Boolfolio</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body d-flex flex-column p-4">
+                    <div class="offcanvas-body d-flex flex-column p-4 flex-lg-row">
                         <ul class="navbar-nav justify-content-center align-content-center flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link mx-2" href="Link">Link</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Progetti</a>
+                                <a class="nav-link mx-2" href="Progetti">Progetti</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">lol</a>
+                                <a class="nav-link mx-2" href="Altro">Altro</a>
                             </li>
                         </ul>
-                        <form class="d-flex mt-3" role="search">
+                        <form class="d-flex justify-content-center align-content-center flex-row gap-2" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-success" type="submit">Search</button>
                         </form>
@@ -50,7 +50,6 @@ export default{
 <style lang="scss">
 
     nav{
-        font-size: larger;
 
         .sidebar{
             background-color: rgba($color: #000000, $alpha: 0.15);
