@@ -10,7 +10,7 @@ export default{
     <header>
         <nav class="navbar bg-dark fixed-top navbar-expand-lg" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Vite Boolfolio</a>
+                <router-link :to="{name: 'home'}" class="navbar-brand fs-2" href="#">Vite Boolfolio</router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,14 +25,11 @@ export default{
                                 Dropdown
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Progetti</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Chi siamo</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
                 <form class="d-flex" role="search">
@@ -46,6 +43,11 @@ export default{
 </template>
 
 <style lang="scss">
+
+    nav{
+        font-size: larger;
+    }
+
     h1{
         color: white;
     }
