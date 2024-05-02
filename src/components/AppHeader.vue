@@ -9,8 +9,8 @@ export default{
 <template>
     <header>
         <!-- navbatr -->
-        <nav class="navbar navbar-dark navbar-expand-lg fixed-top" data-bs-theme="dark">
-            <div class="container-fluid">
+        <nav class="navbar navbar-dark navbar-expand-lg bg-transparent" data-bs-theme="dark">
+            <div class="container">
 
                 <!-- Logo sito -->
                 <router-link :to="{name: 'home'}" class="navbar-brand fs-2" href="#">Vite Boolfolio</router-link>
@@ -25,7 +25,7 @@ export default{
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body d-flex flex-column p-4 flex-lg-row">
-                        <ul class="navbar-nav justify-content-center align-content-center flex-grow-1 pe-3">
+                        <ul class="navbar-nav justify-content-center align-item-center flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link mx-2" href="Link">Link</a>
                             </li>
@@ -36,7 +36,7 @@ export default{
                                 <a class="nav-link mx-2" href="Altro">Altro</a>
                             </li>
                         </ul>
-                        <form class="d-flex justify-content-center align-content-center flex-row gap-2" role="search">
+                        <form class="d-flex justify-content-center align-item-center flex-row gap-2" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-success" type="submit">Search</button>
                         </form>

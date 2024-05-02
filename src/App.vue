@@ -29,15 +29,11 @@ export default {
 </script>
 
 <template>
-    <div class=" align-items-center justify-content-center gap-5 my-5 overflow-hidden">
 
-        <AppHeader></AppHeader>
-        <router-view></router-view>
-        <AppFooter></AppFooter>
-
-    </div>
-
-
+  <AppHeader></AppHeader>
+  <router-view></router-view>
+  <AppFooter></AppFooter>
+  
 </template>
 
 <style lang="scss">

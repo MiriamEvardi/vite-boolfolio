@@ -39,7 +39,6 @@ export default{
     padding: 20px 0;
     text-align: center;
     font-size: large;
-    z-index: -2;
 
     .container {
         width: 80%;
