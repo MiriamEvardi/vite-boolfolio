@@ -14,7 +14,7 @@ export default{
 </script>
 
 <template>
-    <footer class="footer fixed-bottom ">
+    <footer class="footer fixed-bottom">
       <div class="container">
         <div class="footer-content">
           <div class="copyright">
@@ -39,7 +39,7 @@ export default{
     padding: 20px 0;
     text-align: center;
     font-size: large;
-
+    z-index: -2;
 
     .container {
         width: 80%;

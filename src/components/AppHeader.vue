@@ -8,34 +8,39 @@ export default{
 
 <template>
     <header>
-        <nav class="navbar bg-dark fixed-top navbar-expand-lg" data-bs-theme="dark">
+        <!-- navbatr -->
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
+
+                <!-- Logo sito -->
                 <router-link :to="{name: 'home'}" class="navbar-brand fs-2" href="#">Vite Boolfolio</router-link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- z   -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Progetti</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Chi siamo</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+
+                <!-- offcanvas sidebar-->
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Vite Boolfolio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column p-4 flex-lg-row">
+                        <ul class="navbar-nav justify-content-center align-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="Link">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="Progetti">Progetti</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="Altro">Altro</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex justify-content-center align-content-center flex-row gap-2" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -45,10 +50,10 @@ export default{
 <style lang="scss">
 
     nav{
-        font-size: larger;
-    }
 
-    h1{
-        color: white;
+        .sidebar{
+            background-color: rgba($color: #000000, $alpha: 0.15);
+            backdrop-filter: blur(10px);
+        }
     }
 </style>
