@@ -22,7 +22,7 @@ export default{
 <template>
     
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img :src="'http://localhost:8000/storage/' + project.preview" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ project.name }}</h5>
             <p class="card-text">Descrizione progetto</p>
