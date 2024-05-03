@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import HomePage from './pages/HomePage.vue';
 import ShowProject from './pages/ShowProject.vue';
-import ContactUsPage from './pages/ContactUsPage.vue';
+import ContactForm from './components/ContactForm.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -19,9 +19,9 @@ const router = createRouter({
             component: ShowProject
         },
         {
-            path: '/contact',
-            name: 'contact',
-            component: ContactUsPage
+            path: '/contact-me',
+            name: 'contact-me',
+            component: ContactForm
         }
     ]
 
