@@ -13,7 +13,7 @@ export default{
             <div class="container">
 
                 <!-- Logo sito -->
-                <router-link :to="{name: 'home'}" class="navbar-brand fs-2" href="#">Vite Boolfolio</router-link>
+                <router-link :to="{name: 'home'}" class="navbar-brand fs-2">Vite Boolfolio</router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -33,7 +33,7 @@ export default{
                                 <a class="nav-link mx-2" href="Progetti">Progetti</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-2" href="Altro">Altro</a>
+                                <router-link :to="{name: 'contact'}" class="nav-link mx-2">Contattaci</router-link>
                             </li>
                         </ul>
                         <form class="d-flex justify-content-center align-item-center flex-row gap-2" role="search">
