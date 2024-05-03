@@ -13,6 +13,7 @@ export default {
                 message: '',
             },
 
+            isSubmitting: false,
             showAlert: false,
         }
 
@@ -24,21 +25,37 @@ export default {
     },
 
     methods: {
-        sendContactRequest() {
-            this.showAlert = true;
+    sendContactRequest() {
+        if (this.isSubmitting) {
+            // Se il modulo è già in fase di invio, non fare nulla
+            return;
+        }
 
-            axios.post('http://127.0.0.1:8000/api/new-contact', this.formData)
-                .then(res => {
+        // Imposta lo stato di invio su true per disabilitare il pulsante di invio
+        this.isSubmitting = true;
+        this.showAlert = true;
+
+        axios.post('http://127.0.0.1:8000/api/new-contact', this.formData)
+            .then(res => {
                 console.log('Risposta API:', res);
+                // Riporta lo stato di invio su false dopo aver inviato con successo il modulo
+                this.isSubmitting = false;
                 this.showAlert = true; 
-            this.formData = { 
-                name: '',
-                address: '',
-                message: '',
-          };
-        })
+                // Svuota i campi del modulo
+                this.formData = { 
+                    name: '',
+                    address: '',
+                    message: '',
+                };
+            })
+            .catch(error => {
+                // Gestisci eventuali errori nella richiesta
+                console.error('Errore nella richiesta HTTP:', error);
+                // Assicurati che lo stato di invio torni a false anche in caso di errore
+                this.isSubmitting = false;
+            });
     }
-    }
+}
 }
 
 
