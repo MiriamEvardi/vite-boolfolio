@@ -25,14 +25,16 @@ export default {
 
     methods: {
         sendContactRequest() {
-      axios.post('http://127.0.0.1:8000/api/new-contact', this.formData)
-        .then(res => {
-          console.log('Risposta API:', res);
-          this.showAlert = true; 
-          this.formData = { 
-            name: '',
-            address: '',
-            message: '',
+            this.showAlert = true;
+
+            axios.post('http://127.0.0.1:8000/api/new-contact', this.formData)
+                .then(res => {
+                console.log('Risposta API:', res);
+                this.showAlert = true; 
+            this.formData = { 
+                name: '',
+                address: '',
+                message: '',
           };
         })
     }
