@@ -12,7 +12,11 @@ export default {
                 address: '',
                 message: '',
             },
+
+            showAlert: false,
         }
+
+        
     },
 
     mounted() {
@@ -21,13 +25,21 @@ export default {
 
     methods: {
         sendContactRequest() {
-            axios.post('http://127.0.0.1:8000/api/new-contact', this.formData).then(res => {
-             
-            });
-        }
+      axios.post('http://127.0.0.1:8000/api/new-contact', this.formData)
+        .then(res => {
+          console.log('Risposta API:', res);
+          this.showAlert = true; 
+          this.formData = { 
+            name: '',
+            address: '',
+            message: '',
+          };
+        })
     }
-
+    }
 }
+
+
 
 </script>
 
@@ -54,6 +66,11 @@ export default {
 
             <button type="submit" class="btn btn-primary my-4">Submit</button>
         </form>
+
+        <div v-if="showAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+            La mail è stata inviata correttamente
+        <button type="button" class="btn-close" @click="showAlert = false" aria-label="Close"></button>
+    </div>
 
     </div>
 </template>
