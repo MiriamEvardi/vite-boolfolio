@@ -53,7 +53,7 @@ export default{
 
         .sidebar{
             background-color: rgba($color: #000000, $alpha: 0.15);
-            backdrop-filter: blur(10px);
+            // backdrop-filter: blur(10px);
         }
     }
 </style>
