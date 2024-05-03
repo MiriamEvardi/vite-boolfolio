@@ -42,14 +42,14 @@ export default {
             </div>
 
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="formData.address" required>
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label for="address" class="form-label">Indirizzo email</label>
+                <input type="email" class="form-control" id="address" name="address" aria-describedby="emailHelp" v-model="formData.address" required>
+                <div id="emailHelp" class="form-text">Non condivideremo la tua mail con terzi.</div>
             </div>
 
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Scrivici quello che vuoi sapere" id="floatingTextarea" style="height: 100px" v-model="formData.message"></textarea>
-                <label for="floatingTextarea">Comments</label>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Inserisci il tuo messaggio" id="message" name="message" style="height: 200px" v-model="formData.message"></textarea>
+                <label for="message">Messaggio</label>
             </div>
 
             <button type="submit" class="btn btn-primary my-4">Submit</button>

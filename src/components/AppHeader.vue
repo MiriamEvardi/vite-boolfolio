@@ -33,7 +33,7 @@ export default{
                                 <a class="nav-link mx-2" href="Progetti">Progetti</a>
                             </li>
                             <li class="nav-item">
-                                <router-link :to="{name: 'contact'}" class="nav-link mx-2">Contattaci</router-link>
+                                <router-link :to="{name: 'contact-me'}" class="nav-link mx-2">Contattaci</router-link>
                             </li>
                         </ul>
                         <form class="d-flex justify-content-center align-item-center flex-row gap-2" role="search">
